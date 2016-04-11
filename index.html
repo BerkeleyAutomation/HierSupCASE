@@ -42,37 +42,23 @@
 
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract</h3>
 
-<p>Abstract— Recent progress in learning from demonstrations increasingly indicates that robots can acquire manipulation skills from large collections of training data. Online learning from demonstration algorithms such as DAgger can in particular learn policies for problems where the system dynamics and the cost function are unknown. Traditionally, these systems have been trained by skilled human supervisors providing feedback on the current learned policy. As the number of demonstrations increases, this approach can however incur a substantial time and labor cost. We propose that a hierarchy of supervisors that vary is expertise but also in cost can help alleviate this issue. We combine planning on a relaxed problem with crowdsourcing and with robotics experts, and hypothesize that leveraging this combination can lead to similar performance while substantially decreasing cost. We focus on the grasping in clutter problem, and use an architecture for learning from demonstration based on DAgger and deep learning to learn policies directly from image input. Our results ....[fill in]
+<p>For applications such as Amazon warehouse order fulfillment, robots must grasp a desired object amid clutter: other objects that block direct access. This can be difficult to program explicitly due to uncertainty in friction and push mechanics and the variety of objects that can be encountered. Deep Learning networks combined with Online Learning from Demonstration (LfD) algorithms such as DAgger and SHIV have potential to learn robot control policies for such tasks where the input is a camera image and system dynamics and the cost function are unknown.  To explore this idea, we introduce a version of the grasping in clutter problem where a yellow cylinder must be grasped by a planar robot arm amid extruded objects in a variety of shapes and positions. To reduce the burden on human experts to provide demonstrations, we propose using a hierarchy of three levels of supervisors: a fast motion planner that ignores obstacles, crowd-sourced human workers who provide appropriate robot control values remotely via online videos, and a local human expert. Physical experiments suggest that with a fixed budget of 160 expert demonstrations, using the hierarchy of supervisors can increase the probability of a successful grasp (reliability) from $55\%$ to $90\%$.
 </p>
 
+
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documents</h3>
-
-<p>Robotic Grasping in Clutter: Using a Hierarchy of Supervisors with
-Learning from Demonstrations
-
-Michael Laskey, Jonathan Lee, Caleb Chuck, David Gealy, Wesley Hsieh, Florian T. Pokorny,Anca D. Dragan, and Ken Goldberg [<a href="REFERENCE?">PDF</a>].</p>
-
-<!-- <p>Theoretical Analysis of SHIV
-
-Michael Laskey, Jeffrey Mahler,Florian Pokorny, Anca Dragan, Ken Goldberg. [<a href="https://github.com/BerkeleyAutomation/shiv/raw/gh-pages/Documents/theory_section.pdf">PDF</a>].</p> -->
-
-
-
-<!-- <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video for Grasping in Clutter</h3>
 <div align="center">
-<video width="560" height="315" id="sampleMovie" src="https://github.com/BerkeleyAutomation/shiv/raw/gh-pages/Video/Box2D_ARM_SHIV.mp4" controls></video>
+<video width="560" height="315" id="sampleMovie" src="https://github.com/BerkeleyAutomation/shiv/raw/gh-pages/video/LearnedPolicyCASE.mov" controls></video>
 </div>
- -->
-<h3>
+
+
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
 <p>This is an ongoing project at UC Berkeley with active contributions from:<br>
 Michael Laskey, <a href="http://www.cs.berkeley.edu/~ftpokorny/">Florian Pokorny</a>, Jeff Mahler, Jonathan Lee, Caleb Chuck, Wesley Hsieh, <a href="http://www.eecs.berkeley.edu/~anca/"> Anca Dragan</a> and <a href="http://goldberg.berkeley.edu">Ken Goldberg</a></p>
 
-<p>Past contributors include:<br>
-INSERT PAST CONTRIBUTORS</p>
+
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
